@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-svc
+  labels:
+    evn: dev
+spec:
+  type: NodePort
+  ports:
+  - port: 4444
+    nodePort: 30150
+    protocol: TCP
+  selector:
+    env: dev  
